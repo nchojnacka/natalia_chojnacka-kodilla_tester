@@ -18,4 +18,5 @@ public class Convertible extends Car {
     public void openDoors(){
             System.out.println("Opening 2 doors");
     }
+
 }
