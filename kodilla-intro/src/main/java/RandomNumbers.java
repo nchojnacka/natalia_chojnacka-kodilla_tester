@@ -25,7 +25,7 @@ public class RandomNumbers {
             if(number > max) {
                 max = number;
             }
-            System.out.println(sum);
+            System.out.println("Suma kolejnych wylosowanych liczb " + sum);
         }
         System.out.println("Liczba minimalna " + min);
         System.out.println("Liczba maksymalna " + max);
