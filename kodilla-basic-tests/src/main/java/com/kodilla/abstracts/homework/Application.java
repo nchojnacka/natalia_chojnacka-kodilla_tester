@@ -1,0 +1,26 @@
+package com.kodilla.abstracts.homework;
+
+public class Application {
+
+    public static void main(String[] args) {
+
+        // Rectangle
+        double width = 5, length = 7;
+        Shape rectangle = new Rectangle(width, length);
+        System.out.println("Rectangle width: " + width + " length: " + length + "\nResulting area: "
+                + rectangle.area() + "\nResulting perimeter: " + rectangle.perimeter() + "\n");
+
+        // Circle
+        double radius = 5;
+        Shape circle = new Circle(radius);
+        System.out.println("Circle radius: " + radius + "\nResulting Area: " + circle.area()
+                + "\nResulting Perimeter: " + circle.perimeter() + "\n");
+
+        // Triangle
+        double a = 5, b = 3, c = 4;
+        Shape triangle = new Triangle(a, b, c);
+        System.out.println("Triangle sides lengths: " + a + ", " + b + ", " + c + "\nResulting Area: "
+                + triangle.area() + "\nResulting Perimeter: " + triangle.perimeter() + "\n");
+
+    }
+}
