@@ -2,21 +2,21 @@ package com.kodilla.inheritance.homework;
 
 public class OperatingSystem {
 
-    // dwie zmienne prywatne
-    private int linux;
-    private int macOs;
-    //konstruktor Car
-    public OperatingSystem(int linux, int macOs) {
-        this.linux = linux;
-        this.macOs = macOs;
+    int year;
+    int version;
+    String admin;
+
+    public OperatingSystem(int year, int version, String admin){
+        this.year = year;
+        this.version = version;
+        this.admin = admin;
     }
 
-    public void turnOn() {
-        System.out.println("System jest włączony do 31.12.2021r");
+    public void turnOn(){
+        System.out.println("Turn on");
     }
 
-    public void turnOff() {
-        System.out.println("System jest wyłączony");
+    public void turnOff(){
+        System.out.println("Turn off");
     }
-
 }
