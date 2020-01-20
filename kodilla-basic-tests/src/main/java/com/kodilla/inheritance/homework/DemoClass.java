@@ -1,6 +1,5 @@
 package com.kodilla.inheritance.homework;
 import static com.kodilla.inheritance.homework.Linux.admin;
-import static com.kodilla.inheritance.homework.Windows.admin;
 
 public class DemoClass {
 

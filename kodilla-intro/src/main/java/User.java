@@ -4,10 +4,8 @@ public class User {
     private int wiek;
 
     public User(String imie, int wiek) {
-
         this.imie = imie;
         this.wiek = wiek;
-
     }
 
     public static void main(String[] args) {
@@ -36,7 +34,6 @@ public class User {
                 System.out.println(user.imie + " " + user.wiek);
             }
         }
-
     }
 
     public static int averageAge(int[] numbers){
@@ -47,6 +44,5 @@ public class User {
         result = result/numbers.length;
         return result;
     }
-
 }
 
