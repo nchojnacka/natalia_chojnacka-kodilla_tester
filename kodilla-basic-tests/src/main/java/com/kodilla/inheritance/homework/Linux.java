@@ -1,20 +1,13 @@
 package com.kodilla.inheritance.homework;
-
 public class Linux extends OperatingSystem {
 
-    public static String admin;
+    public static String  admin;
 
     public Linux(int year, int version, String adminLinux) {
         super(year, version, admin);
         this.year = year;
         this.version = version;
         this.admin = adminLinux;
-    }
-
-    public static void main(String[] args) {
-        Linux linux = new Linux(2020, 1, admin);
-        linux.turnOn();
-        linux.turnOff();
     }
 
     //metoda 1 - wersja systemu
@@ -26,5 +19,4 @@ public class Linux extends OperatingSystem {
     public void systemAdminName() {
         System.out.println("System Linux owner's nick name is " + admin);
     }
-
 }
