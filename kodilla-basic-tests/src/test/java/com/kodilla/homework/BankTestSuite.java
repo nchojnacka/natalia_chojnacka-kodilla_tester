@@ -1,4 +1,4 @@
-/*package com.kodilla.homework;
+package com.kodilla.homework;
 
 import com.kodilla.bank.homework.Bank;
 import com.kodilla.bank.homework.CashMachine;
@@ -76,4 +76,3 @@ public class BankTestSuite {
         assertEquals(50, bank.getAverageOfPayments());
     }
 }
-*/

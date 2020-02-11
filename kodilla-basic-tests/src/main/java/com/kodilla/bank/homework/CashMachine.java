@@ -33,16 +33,15 @@ public class CashMachine {
         if (this.transactions.length == 0) {
             return 0;
         }
-            if (this.transactions.length == 0) {
-                return 0;
+        int withdraw = 0;
+        for (int i = 0; i < this.transactions.length; i++) {
+            if (this.transactions[i] < 0) {
+                withdraw -= this.transactions[i];
+
+                System.out.println("Wartosc po odehmowaniu " + withdraw);
             }
-            int withdraw = 0;
-            for (int i = 0; i < this.transactions.length; i++) {
-                if (this.transactions[i] < 0) {
-                    withdraw -= this.transactions[i];
-                }
-            }
-            return withdraw;
+        }
+        return withdraw;
     }
 
     public int getCountOfWithdraws() {

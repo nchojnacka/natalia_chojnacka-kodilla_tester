@@ -1,9 +1,9 @@
-/*package com.kodilla.homework;
+package com.kodilla.homework;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import com.kodilla.bank.homework.CashMachine;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class CashMachineTestSuite {
 
@@ -20,9 +20,11 @@ public class CashMachineTestSuite {
     @Test
     public void countWithdraw() {
         CashMachine cashMachine = new CashMachine();
-        cashMachine.add(25);
-        cashMachine.add(25);
-        cashMachine.add(25);
+        cashMachine.add(-25);
+        cashMachine.add(-25);
+        cashMachine.add(-25);
+        System.out.println("Withdraw " + cashMachine.getWithdraw());
+
 
         assertEquals(75, cashMachine.getWithdraw());
     }
@@ -30,11 +32,11 @@ public class CashMachineTestSuite {
     @Test
     public void countOfWithdraws() {
         CashMachine cashMachine = new CashMachine ();
-        cashMachine.add(100);
-        cashMachine.add(200);
-        cashMachine.add(100);
+        cashMachine.add(-100);
+        cashMachine.add(-200);
+        cashMachine.add(-100);
 
-        assertEquals(400, cashMachine.getCountOfWithdraws());
+        assertEquals(3, cashMachine.getCountOfWithdraws());
     }
 
     @Test
@@ -54,7 +56,6 @@ public class CashMachineTestSuite {
         cashMachine.add(60);
         cashMachine.add(70);
 
-        assertEquals(180, cashMachine.getCountOfPayments());
+        assertEquals(3, cashMachine.getCountOfPayments());
     }
 }
-*/
