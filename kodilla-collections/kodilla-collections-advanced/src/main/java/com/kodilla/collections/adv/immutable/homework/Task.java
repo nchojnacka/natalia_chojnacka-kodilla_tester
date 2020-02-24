@@ -1,4 +1,4 @@
-package com.kodilla.collestions.adv.immutable.homework;
+package com.kodilla.collections.adv.immutable.homework;
 
 public class Task {
 

@@ -1,4 +1,4 @@
-package com.kodilla.collestions.adv.maps.complex;
+package com.kodilla.collections.adv.maps.complex;
 
 import java.util.Objects;
 

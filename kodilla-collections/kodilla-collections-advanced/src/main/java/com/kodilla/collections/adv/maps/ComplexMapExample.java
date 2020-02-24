@@ -1,7 +1,7 @@
-package com.kodilla.collestions.adv.maps;
+package com.kodilla.collections.adv.maps;
 
-import com.kodilla.collestions.adv.maps.complex.Grades;
-import com.kodilla.collestions.adv.maps.complex.Student;
+import com.kodilla.collections.adv.maps.complex.Grades;
+import com.kodilla.collections.adv.maps.complex.Student;
 
 import java.util.HashMap;
 import java.util.Map;

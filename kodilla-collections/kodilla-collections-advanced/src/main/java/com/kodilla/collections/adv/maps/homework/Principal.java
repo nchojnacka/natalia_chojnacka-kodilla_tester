@@ -1,4 +1,4 @@
-package com.kodilla.collestions.adv.maps.homework;
+package com.kodilla.collections.adv.maps.homework;
 
 import java.util.Objects;
 
