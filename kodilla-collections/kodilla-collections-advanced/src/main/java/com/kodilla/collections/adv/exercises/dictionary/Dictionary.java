@@ -4,6 +4,7 @@ import java.util.*;
 
 public class Dictionary {
     Map<String, List<EnglishWord>> dictionary = new HashMap<>();
+    public PartOfSpeech partOfSpeech;
 
     public void addWord(String polishWord, EnglishWord englishWord) {
             List<EnglishWord> englishWords =
@@ -21,6 +22,11 @@ public class Dictionary {
     }
 
     public List<EnglishWord> findEnglishWords(String polishWord) {
-        return dictionary.getOrDefault(polishWord, Collections.emptyList());
+        List<EnglishWord> result = new ArrayList<>();
+        for (EnglishWord englishWord : dictionary.getOrDefault(polishWord, Collections.emptyList())) {
+            if (englishWord.getPartOfSpeech().equals(partOfSpeech))
+                result.add(englishWord);
+        }
+        return result;
     }
 }

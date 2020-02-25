@@ -37,4 +37,20 @@ public class DictionaryTest {
         expectedList.add(new EnglishWord(PartOfSpeech.NOUN, "game"));
         assertEquals(2, result.size());
     }
+
+    @Test
+    public void testFindEnglishWords_withPartOfSpeech() {
+        //given
+        Dictionary dictionary = new Dictionary();
+        dictionary.addWord("stos", new EnglishWord(PartOfSpeech.NOUN, "stack"));
+        dictionary.addWord("brać", new EnglishWord(PartOfSpeech.NOUN, "brotherhood"));
+        dictionary.addWord("brać", new EnglishWord(PartOfSpeech.NOUN, "take"));
+        dictionary.addWord("grać", new EnglishWord(PartOfSpeech.VERB, "play"));
+        //when
+        List<EnglishWord> result = dictionary.findEnglishWords("brać", PartOfSpeech.NOUN);
+        //then
+        List<EnglishWord> expectedList = new ArrayList<>();
+        expectedList.add(new EnglishWord(PartOfSpeech.NOUN, "brotherhood"));
+        assertEquals(expectedList, result);
+    }
 }
