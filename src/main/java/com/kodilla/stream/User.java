@@ -15,7 +15,7 @@ public class User {
         this.group = group;
     }
 
-    String getUsername(){return username;}
+    public String getUsername(){return username;}
     int getAge(){return age;}
     int getNumberOfPosts(){return numberOfPosts;}
     String getGroup(){return group;}
