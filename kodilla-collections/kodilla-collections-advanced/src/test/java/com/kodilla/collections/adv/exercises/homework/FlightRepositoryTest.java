@@ -1,11 +1,10 @@
 package com.kodilla.collections.adv.exercises.homework;
 
-import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Test;
 
 class FlightRepositoryTest {
 
@@ -17,6 +16,8 @@ class FlightRepositoryTest {
         expectedList.add(new Flight("Berlin", "Warsaw"));
         expectedList.add(new Flight("Berlin", "LA"));
         expectedList.add(new Flight("Berlin", "Malta"));
+        expectedList.add(new Flight("Berlin", "London"));
+
         assertEquals(expectedList, result);
     }
 
@@ -28,6 +29,18 @@ class FlightRepositoryTest {
         expectedList.add(new Flight("Moscow", "London"));
         expectedList.add(new Flight("Berlin", "London"));
         expectedList.add(new Flight("Paris", "London"));
-        assertEquals(expectedList, result);
+
+        List<Boolean> listaTrue = new ArrayList<>();
+
+        for(Flight flightFromExpectedList : expectedList){
+            for(Flight flightFromResultsList : result){
+
+                if(flightFromExpectedList.getDeparture().contains(flightFromResultsList.getDeparture())){
+                    listaTrue.add(true);
+                }
+
+            }
+        }
+        assertEquals(listaTrue.size(), 3);
     }
 }
