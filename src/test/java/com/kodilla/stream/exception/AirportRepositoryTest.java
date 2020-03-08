@@ -1,9 +1,11 @@
-package com.kodilla.stream.exception
+package com.kodilla.stream.exception;
 
-import org.junit.Test
+import org.junit.Test;
 
-class AirportRepositoryTestSuite {
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
+public class AirportRepositoryTest {
     @Test
     public void testIsAirportInUse() throws AirportNotFoundException {
         //given
@@ -14,7 +16,7 @@ class AirportRepositoryTestSuite {
         assertTrue(isWarsawInUse);
     }
 
-    @Test
+    @Test(expected = AirportNotFoundException.class)
     public void testIsAirportInUse_withException() throws AirportNotFoundException {
         //given
         AirportRepository airportRepository = new AirportRepository();
@@ -23,4 +25,5 @@ class AirportRepositoryTestSuite {
         //then
         assertFalse(isWarsawInUse);
     }
+
 }

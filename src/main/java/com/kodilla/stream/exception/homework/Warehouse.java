@@ -15,7 +15,7 @@ public class Warehouse {
                 .stream()
                 .filter(o -> o.getNumber().equals(number))
                 .findFirst().orElseThrow(OrderDoesntExistException::new);
-        System.out.println("Order numer is: " + order.getNumber());
+        System.out.println("Order number is: " + order.getNumber());
         return order;
     }
 }
