@@ -18,7 +18,7 @@ class UserValidatorTestSuite {
 
     @ParameterizedTest
     @ValueSource(strings = {"anna1@mail.pl", "katarzyna2@mail.pl", "anna1@mail.com", "katarzyna*1@mail.com", "katarzyna.anna@mail.com"})
-    public void validateRmail(String email) {
+    public void validateEmail(String email) {
         boolean result = userValidator.validateEmail(email);
         assertTrue(result);
     }

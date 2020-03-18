@@ -5,11 +5,14 @@ import java.util.regex.Pattern;
 
 public class UserValidator {
 
-    public boolean validateUsername(String username) {
-        return username.matches("^[a-zA-Z0-9._-]{3,}$\n");
+    public static void main(String[] args) {
+        validateEmail("emailemail.com");
+    }
+    public static boolean validateUsername(String username) {
+        return username.matches("^a-zA-Z0-9._-]{3,}$\n");
     }
 
-    public boolean validateEmail(String email) {
+    public static boolean validateEmail(String email) {
         if (null != email) {
             String regex = "^([_a-zA-Z0-9-]+(\\.[_a-zA-Z0-9-]+)*@[a-zA-Z0-9-]+(\\.[a-zA-Z0-9-]+)*(\\.[a-zA-Z]{1,6}))?$";
             Pattern pattern = Pattern.compile(regex);

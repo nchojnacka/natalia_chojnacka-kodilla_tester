@@ -16,8 +16,8 @@ public class User {
     }
 
     public String getUsername(){return username;}
-    int getAge(){return age;}
-    int getNumberOfPosts(){return numberOfPosts;}
+    public int getAge(){return age;}
+    public int getNumberOfPosts(){return numberOfPosts;}
     String getGroup(){return group;}
 
     @Override
