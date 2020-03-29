@@ -5,8 +5,7 @@ import java.util.Random;
 import java.util.Set;
 
 public class GamblingMachine {
-
-    public int homManyWins(Set<Integer> userNumbers) throws InvalidNumbersException {
+    public int howManyWins(Set<Integer> userNumbers) throws InvalidNumbersException {
         validateNumbers(userNumbers);
         Set<Integer> computerNumbers = generateComputerNumbers();
         int count = 0;
@@ -22,7 +21,12 @@ public class GamblingMachine {
         if (numbers.size() != 6) {
             throw new InvalidNumbersException();
         }
+
         if (numbers.stream().anyMatch(number -> number < 1)) {
+            throw new InvalidNumbersException();
+        }
+
+        if (numbers.stream().anyMatch(number -> number > 49)) {
             throw new InvalidNumbersException();
         }
     }
