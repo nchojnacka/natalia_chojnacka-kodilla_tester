@@ -7,6 +7,7 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 public class Shop {
+
     private Set<Order> orders = new HashSet<>();
 
     public void addOrder(Order order){
@@ -24,7 +25,6 @@ public class Shop {
                 .filter(order -> order.getValue() >= minValue && order.getValue() <= maxValue)
                 .collect(Collectors.toList());
     }
-
 
     public int getNumberOfOrders(){
         return orders.size();

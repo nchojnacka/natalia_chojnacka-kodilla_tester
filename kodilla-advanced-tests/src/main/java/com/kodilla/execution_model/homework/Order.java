@@ -4,15 +4,14 @@ import java.time.LocalDate;
 import java.util.Objects;
 
 public class Order {
-
     private double value;
     private LocalDate date;
-    private String login;
+    private String username;
 
     public Order(double value, LocalDate date, String username) {
         this.value = value;
         this.date = date;
-        this.login = login;
+        this.username = username;
     }
 
     public double getValue() {
@@ -23,8 +22,8 @@ public class Order {
         return date;
     }
 
-    public String getLogin() {
-        return login;
+    public String getUsername() {
+        return username;
     }
 
     @Override
@@ -32,7 +31,7 @@ public class Order {
         return "Order{" +
                 "value=" + value +
                 ", date=" + date +
-                ", username='" + login + '\'' +
+                ", username='" + username + '\'' +
                 '}';
     }
 
@@ -43,11 +42,11 @@ public class Order {
         Order order = (Order) o;
         return Double.compare(order.value, value) == 0 &&
                 Objects.equals(date, order.date) &&
-                Objects.equals(login, order.login);
+                Objects.equals(username, order.username);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(value, date, login);
+        return Objects.hash(value, date, username);
     }
 }
