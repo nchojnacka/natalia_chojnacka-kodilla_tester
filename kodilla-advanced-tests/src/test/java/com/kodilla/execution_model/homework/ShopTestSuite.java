@@ -20,7 +20,6 @@ class ShopTestSuite {
         shop.addOrder(new Order(25.4, LocalDate.of(2014,9, 8), "julia15"));
         shop.addOrder(new Order(1990.5, LocalDate.of(2017,12, 27), "mike77"));
         shop.addOrder(new Order(1990.5, LocalDate.of(2017,12, 27), "mike77"));
-
     }
 
     @Test
@@ -30,34 +29,23 @@ class ShopTestSuite {
 
     @Test
     public void shouldReturnOrdersOfTheLastTwoYears(){
-        //when
         List<Order> resultList = shop.getOrdersOfTheLastTwoYears();
-        //then
         assertEquals(2, resultList.size());
     }
 
     @Test
     public void shouldGetOrdersWithValueBetween(){
-        //when
         List<Order> resultList = shop.getOrdersOfTheValueBetween(100.0, 1000.0);
-        //then
         assertEquals(3, resultList.size());
     }
     @Test
     public void shouldGetNumbersOfOrders(){
-        //when
         int result = shop.getNumberOfOrders();
-        //then
         assertEquals(5, result);
     }
     @Test
     public void shouldGetSumOfValues(){
-        //when
         double result = shop.getSumOfValue();
-        //then
         assertEquals(2745.3, result);
     }
-
-
-
 }
