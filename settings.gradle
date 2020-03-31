@@ -10,4 +10,7 @@ include 'kodilla-advanced-tests'
 include 'com.kodilla.parametrized_tests'
 include 'kodilla-advanced-tests'
 include 'kodilla-advanced-tests'
+include 'm.kodilla.spring.basic'
+include 'com.kodilla.spring.basic'
+include 'kodilla-spring-basic'
 

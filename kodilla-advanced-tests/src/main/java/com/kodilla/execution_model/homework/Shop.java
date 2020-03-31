@@ -36,7 +36,6 @@ public class Shop {
             sum+= order.getValue();
         }
         return sum;
-
     }
 
     public int getSize(){
