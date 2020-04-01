@@ -1,4 +1,4 @@
-package com.kodilla.spring.basic.dependency_injection.homework;
+package com.kodilla.spring.basic.spring_dependency_injectio.homework;
 
 public class ShippingCenter {
 
@@ -10,12 +10,11 @@ public class ShippingCenter {
         this.notificationService = notificationService;
     }
 
-    public String sendPackage(String  address, double weight) {
+    public void sendPackage(String  address, double weight) {
         if (deliveryService.deliverPackage(address, weight)) {
             notificationService.success(address);
         } else {
             notificationService.fail(address);
         }
-        return address;
     }
 }

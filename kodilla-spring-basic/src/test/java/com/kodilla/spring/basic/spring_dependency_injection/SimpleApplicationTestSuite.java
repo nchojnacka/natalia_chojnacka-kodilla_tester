@@ -1,15 +1,15 @@
 package com.kodilla.spring.basic.spring_dependency_injection;
 
+import org.junit.jupiter.api.Assertions;
 import com.kodilla.spring.basic.spring_dependency_injectio.SimpleApplication;
 import com.kodilla.spring.basic.spring_dependency_injectio.SkypeMessageService;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 @SpringBootTest
-public class SimpleApplicationTestSuite {
+class SimpleApplicationTestSuite {
 
     @Test
     public void shouldReturnCorrectMessage() {
@@ -24,6 +24,6 @@ public class SimpleApplicationTestSuite {
         ApplicationContext context = new AnnotationConfigApplicationContext("com.kodilla.spring.basic");
         SimpleApplication bean = context.getBean(SimpleApplication.class);
         String message = bean.processMessage("Test", "Any receiver");
-        Assertions.assertEquals("Sending [Test] to: Any receiver using Skype", message);
+        Assertions.assertEquals("Sending [Test] to: Any receiver using Skype.", message);
     }
 }
