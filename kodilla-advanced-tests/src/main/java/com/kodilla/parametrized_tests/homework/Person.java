@@ -1,15 +1,12 @@
 package com.kodilla.parametrized_tests.homework;
 
 public class Person {
-
     private double heightInMeters;
     private double weightInKilogram;
-    public String description;
 
-    public Person(double heightInMeters, double weightInKilogram, String description) {
+    public Person(double heightInMeters, double weightInKilogram) {
         this.heightInMeters = heightInMeters;
         this.weightInKilogram = weightInKilogram;
-        this.description = description;
     }
 
     public String getBMI() {
