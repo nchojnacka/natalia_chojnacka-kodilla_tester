@@ -8,7 +8,7 @@ import java.util.concurrent.TimeUnit;
 
 public class AllegroTestingAp {
     public static void main(String[] args) {
-        System.setProperty("webdriver.chrome.driver", "/Users/nchojnacka/Documents/Develop/chromedriver");
+        System.setProperty("webdriver.chrome.driver", "chromedriver");
         WebDriver driver = new ChromeDriver();
         driver.get("https://allegro.pl");
 
