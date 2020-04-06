@@ -7,20 +7,16 @@ buildscript {
     }
 }
 
-apply plugin: "java"
-apply plugin: "eclipse"
-apply plugin: "idea"
-apply plugin: "org.springframework.boot"
-apply plugin: "io.spring.dependency-management"
-
-configurations {
-    jaxb
-}
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
 
 task genJaxb {
     ext.sourcesDir = "${buildDir}/generated-sources/jaxb"
     ext.classesDir = "${buildDir}/classes/jaxb"
-    ext.schema = "src/main/resources/library.xsd"
+    ext.schema = "src/main/resources/soap-library.xsd"
 
     outputs.dir classesDir
 
@@ -33,31 +29,34 @@ task genJaxb {
 
             xjc(destdir: sourcesDir, schema: schema) {
                 arg(value: "-wsdl")
-                produces(dir: sourcesDir, includes: "/.java")
+                produces(dir: sourcesDir, includes: "**/*.java")
             }
 
-            javac(destdir: classesDir, source: 1.10, target: 1.10, debug: true,
+            javac(destdir: classesDir, source: 1.8, target: 1.8, debug: true,
                     debugLevel: "lines,vars,source",
                     classpath: configurations.jaxb.asPath) {
                 src(path: sourcesDir)
-                include(name: "/.java")
+                include(name: "**/*.java")
                 include(name: "*.java")
             }
 
             copy(todir: classesDir) {
                 fileset(dir: sourcesDir, erroronmissingdir: false) {
-                    exclude(name: "/.java")
+                    exclude(name: "**/*.java")
                 }
             }
         }
     }
 }
 
+configurations {
+    jaxb
+}
 
 
 bootJar {
-    baseName = "kodilla-soap-library"
-    version = "1.0.0"
+    baseName = 'kodilla-soap-library'
+    version =  '1.0.0'
     from genJaxb.classesDir
 }
 
