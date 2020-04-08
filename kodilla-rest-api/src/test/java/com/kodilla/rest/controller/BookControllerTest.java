@@ -1,10 +1,14 @@
 package com.kodilla.rest.controller;
 
+import com.google.gson.Gson;
 import com.kodilla.rest.domain.BookDto;
 import com.kodilla.rest.service.BookService;
 import org.junit.Assert;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
+import org.springframework.http.MediaType;
+import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
+import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -57,4 +61,5 @@ class BookControllerTest {
         Mockito.verify(bookServiceMock, Mockito.times(1)).removeBook(new BookDto("Title 4", "Author 4"));
         Assert.assertEquals(2, resultList.size());
     }
+
 }
